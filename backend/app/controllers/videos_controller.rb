@@ -2,7 +2,6 @@ class VideosController < ApplicationController
 
     before_action :find_video, only: [:update, :destroy]
 
-
     def index
         videos = Video.all
         render json: VideoSerializer.new(videos).serialized_json

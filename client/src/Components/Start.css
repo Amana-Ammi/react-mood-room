@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap);
+
+body {
+  background: url(../images/blue-dr.jpg) no-repeat center center fixed;
+  
+}
+
+.start-pg {
+  text-align: center;
+  font-size: 55px;
+  font-weight: bold;
+  font-family: 'Racing Sans One';
+}
+
+.info-box {
+  width: 300px;
+  border: 5px solid black;
+  padding: 50px;
+  margin: 20px;
+  background: rgba(76, 175, 80, 0.3);
+
+}

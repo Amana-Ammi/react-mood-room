@@ -9,7 +9,7 @@ class Header extends Component {
     render() { 
         return (
             <div className="logo-casing">
-                <h1 className="logo">The Mood Room</h1>
+                <h1 className="nav-logo">The Mood Room</h1>
             </div>
           );
     }

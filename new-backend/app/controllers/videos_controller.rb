@@ -19,7 +19,7 @@ class VideosController < ApplicationController
     # strong params 
     
     def video_params
-        params.require(:video).permit(:name, :vid_url, :mood, :genre)
+        params.require(:video).permit(:name, :vid_url, :mood)
     end
 
     def find_video

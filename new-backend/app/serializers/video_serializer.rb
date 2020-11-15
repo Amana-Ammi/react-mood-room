@@ -1,4 +1,4 @@
 class VideoSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :id, :title, :vid_url, :mood, :genre, :room
+  attributes :id, :title, :vid_url, :mood, :room
 end

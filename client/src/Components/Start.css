@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap);
 
-body {
-  background: url(../images/pink_rm.jpg) no-repeat center center fixed;
-  
+.start-body {
+  background: url(../images/pink_rm.jpg) no-repeat center center fixed!important;
+  min-height: 100vh;
 }
 
 .start-pg {
@@ -17,6 +17,6 @@ body {
   border: 5px solid black;
   padding: 50px;
   margin: 20px;
-  background: rgba(76, 175, 80, 0.3);
+  background: rgba(167, 138, 150, 0.3);
 
 }

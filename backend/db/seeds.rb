@@ -7,20 +7,19 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-blue = Room.create(name: "Blue Room", image_url: "https://www.pexels.com/photo/shallow-focus-photography-of-water-droplets-1202841/")
 
 Video.create([
-    { title: "Rainy Day Soul", vid_url: "https://www.youtube.com/watch?v=f02mOEt11OQ", mood: "chill", room_id: blue.id}
+    { title: "Rainy Day Soul", vid_url: "https://www.youtube.com/watch?v=f02mOEt11OQ", mood: "chill", likes: 25 , dislikes: 1 }
 ])
 
 Video.create([
-    { title: "Lo-fi", vid_url: "https://www.youtube.com/watch?v=GZgoXPybYOY", mood: "chill", room_id: blue.id}
+    { title: "Lo-fi", vid_url: "https://www.youtube.com/watch?v=GZgoXPybYOY", mood: "chill", likes: 25 , dislikes: 5 }
 ])
 
 Video.create([
-    { title: "Afro Beats", vid_url: "https://www.youtube.com/watch?v=FrCUPRHNhOw", mood: "hype", room_id: blue.id}
+    { title: "Afro Beats", vid_url: "https://www.youtube.com/watch?v=FrCUPRHNhOw", mood: "fun", likes: 15, dislikes: 0 }
 ])
 
 Video.create([
-    { title: "Dance", vid_url: "https://www.youtube.com/watch?v=Elt0ZQo5bHY", mood: "dance", room_id: blue.id}
+    { title: "Dance", vid_url: "https://www.youtube.com/watch?v=Elt0ZQo5bHY", mood: "happy", likes: 20, dislikes: 10 }
 ])

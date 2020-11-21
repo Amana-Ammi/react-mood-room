@@ -12,22 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2020_11_15_024316) do
 
-  create_table "rooms", force: :cascade do |t|
-    t.string "name"
-    t.string "image_url"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "videos", force: :cascade do |t|
     t.string "title"
     t.string "vid_url"
     t.string "mood"
-    t.integer "room_id", null: false
+    t.integer "likes"
+    t.integer "dislikes"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["room_id"], name: "index_videos_on_room_id"
   end
 
-  add_foreign_key "videos", "rooms"
 end

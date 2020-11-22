@@ -1,24 +1,29 @@
-import Header from './Components/Header';
-import Home from './Components/Home';
-import Api from './Components/Api';
-import Start from './Components/Start';
-import Blue from './Components/Blue';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
+
+import RoomCard from './components/Card'
+
+import NowPlaying from './components/NowPlaying';
 
 
 function App() {
   return (
+    
     <Router>
       <div className="App">
+      <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/api" component={Api} />
-          <Route path="/start" component={Start} />
-          <Route path="/blue" component={Blue} />
-          {/* <Route path="/afrobeat" component={Start} /> */}
-          {/* <Route path="/danceroom" component={Start} />  */}
+          <Route path="/about" component={About} />
+          
+          <Route path="/blue" component={NowPlaying} />
+          <Route path="/card" component={RoomCard} />
         </Switch>
       </div>
     </Router>

@@ -1,53 +1,52 @@
 import React, { Component } from 'react';
+// higher level component that connects react to redux
+import { connect } from 'react-redux'; 
+import { getVideos } from '../actions/videos'
 import ReactPlayer from 'react-player';
 
 
+
 class NowPlaying extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isLoading: true,
-            video: []
-        }
-        this.renderTitles = this.renderTitles.bind(this)
-    }
-
     componentDidMount() {
-        this.setState({loading: true})
-        fetch('http://localhost:3001/api/v1/videos')
-            .then(resp => resp.json())
-            .then(data => {
-                
-                //  console.log(data)
-                // console.log(data.data[1].attributes.title)
-                this.setState({
-                    isLoading: false,
-                    video: data
-                })
-            })
+        this.props.getVideos()
     }
 
-    renderTitles() {
-        // console.log(this.state.video)
-        return  (
-        this.state.video.map(video =>
+
+     render() {
+        const videos = this.props.videos.map((video, i) => <li key={i}>{video.title}</li> )
+
+        return (
             <div>
-                <p> {video.title} : {video.mood}</p>
-                <ReactPlayer url={video.vid_url}/>
-            </div> 
-            )
+                <h2>Page</h2>
+                <ul>
+                    {this.props.loading ? <h3>Loading.....</h3> : videos}
+                </ul>
+            </div>
         )
     }
 
-    render() { 
-        return (
-            <div>
-                {/* <p>{console.log(this.renderTitles())}</p> */}
-                {this.state.isLoading ? <h3>Wait for it..</h3> : <h1>{this.renderTitles()}</h1> }
-            </div>
-            
-          );
+    // renderTitles() {
+    //     // console.log(this.state.video)
+    //     return  (
+    //     this.state.video.map(video =>
+    //         <div>
+    //             <p> {video.title} : {video.mood}</p>
+    //             <p> Likes: {video.likes}</p>
+    //             <p> Disikes: {video.dislikes}</p>
+    //             <ReactPlayer url={video.vid_url}/>
+                
+    //         </div> 
+    //         )
+    //     )
+    // }
+
+}
+
+const mapStateToProps = state => {
+    return {
+        videos: state.videoReducer.videos,
+        loading: state.videoReducer.loading
     }
 }
  
-export default NowPlaying;
+export default connect(mapStateToProps, { getVideos })(NowPlaying)

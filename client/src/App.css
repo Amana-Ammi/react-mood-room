@@ -2,6 +2,33 @@
   text-align: center;
 } */
 
+/* .navbar-body {
+  background: rgba(255,255,255,0.9);
+  display: flex;
+  justify-content: space-around;
+}
+
+.blue-body {
+  background: url(./images/blue-dr.jpg) no-repeat center center fixed!important;
+  min-height: 100vh;
+} */
+
+
+.video {
+  width: 400px;
+  border: 5px solid black;
+  padding: fit-content;
+  margin-top: 20%;
+  margin-left: 25%;
+}
+
+.container {
+  display: grid | inline-grid;
+  float: left;
+  width: 45%;
+}
+
+
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;

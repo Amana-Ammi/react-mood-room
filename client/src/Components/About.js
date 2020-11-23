@@ -1,27 +1,66 @@
 import React, { Component } from 'react';
-import './Start.css';
+import { connect } from 'react-redux';
+import { fetchVideos } from '../actions/videos';
+import { Link } from 'react-router-dom';
+import { CardDeck, Card, Button } from 'react-bootstrap';
+
+import './Card.css';
 
 
-//make this a stateless component
+// Want photos with links to the room and appropriate ID. 
+// Possibly remove like and dislike feature from backend
 
 class About extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {  }
+    componentDidMount() {
+        console.log(this.props.match.params)
+        this.props.fetchVideos()
+
+    }
+
+    // handleOnClick() {
+    //     // console.log(this.props.match.params.video_id)
+    //     let id = this.props.match.params.video_id
     // }
-    render() { 
-        return ( 
-            <div className="start-body">
-                <header className="start-pg">How It Works</header>
-                <div className="info-box">
-                    <h3>The Mood Room was designed to minimize the time it takes you to find a suitable playlist.
-                        Here, simply just select a room below based off of our curated moods and get groovin'.
-                    </h3>
-                </div>
+
+
+     render() {
+        const videos = this.props.videos.map((video, i) =>  
+            <CardDeck className="card-deck" >
+                <Card className="overflow" style={{ width: '45rem' }}>
+                    <Card.Img className="card-img" variant="top" src={video.image_url} />
+                    <Card.Body className="card-body"y>
+                        <Card.Title>{video.title}</Card.Title>
+                        {/* <Card.Text>
+                        Some quick example text to build on the card title and make up the bulk of
+                        the card's content.
+                        </Card.Text> */}
+                        < Link to="/{:video_id}">
+                            {/* <Button onClick={(event) => this.handleOnClick(event)} variant="primary">Listen Now</Button> */}
+                            <Button variant="primary">Listen Now</Button>
+                        </Link>
+                    </Card.Body>
+                </Card>
+            </CardDeck>
+            )
+
+        return (
+            <div className="container" style={{ padding: '10rem' }} >
+                <h2>Pick Your Poison</h2>
+
+                    {this.props.loading ? <h3>Loading.....</h3> : videos}
+
             </div>
-         );
+        )
+    }
+
+}
+
+const mapStateToProps = state => {
+    return {
+        videos: state.videoReducer.videos,
+        loading: state.videoReducer.loading
     }
 }
  
-export default About;
+export default connect(mapStateToProps, { fetchVideos })(About)
 

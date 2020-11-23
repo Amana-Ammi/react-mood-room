@@ -1,44 +1,47 @@
 import React, { Component } from 'react';
-// higher level component that connects react to redux
-import { connect } from 'react-redux'; 
-import { getVideos } from '../actions/videos'
-import ReactPlayer from 'react-player';
+import { connect } from 'react-redux';
+import { fetchVideos } from '../actions/videos';
+import ReactPlayer from 'react-player'
+import { Link } from 'react-router-dom';
+import { CardDeck, Card, Button } from 'react-bootstrap';
+
+import './Card.css';
 
 
+// Want photos with links to the room and appropriate ID. 
+// Possibly remove like and dislike feature from backend
 
-class NowPlaying extends Component {
+class About extends Component {
     componentDidMount() {
-        this.props.getVideos()
+        // console.log(this.props.match.params.video_id)
+        // console.log(this.handleOnClick())
+        this.props.fetchVideos()
+
+    }
+
+    handleOnClick() {
+        // console.log(this.props.match.params.video_id)
+        let id = this.props.match.params.video_id
     }
 
 
      render() {
-        const videos = this.props.videos.map((video, i) => <li key={i}>{video.title}</li> )
+        const videos = this.props.videos.map((video, i) =>  
+         <div>
+             <h2>{video.title}</h2>
+             <ReactPlayer url={video.vid_url} />
+         </div>
+            )
 
         return (
-            <div>
-                <h2>Page</h2>
-                <ul>
+            <div className="container" style={{ padding: '10rem' }} >
+                <h2>Now Playing...</h2>
+
                     {this.props.loading ? <h3>Loading.....</h3> : videos}
-                </ul>
+
             </div>
         )
     }
-
-    // renderTitles() {
-    //     // console.log(this.state.video)
-    //     return  (
-    //     this.state.video.map(video =>
-    //         <div>
-    //             <p> {video.title} : {video.mood}</p>
-    //             <p> Likes: {video.likes}</p>
-    //             <p> Disikes: {video.dislikes}</p>
-    //             <ReactPlayer url={video.vid_url}/>
-                
-    //         </div> 
-    //         )
-    //     )
-    // }
 
 }
 
@@ -49,4 +52,5 @@ const mapStateToProps = state => {
     }
 }
  
-export default connect(mapStateToProps, { getVideos })(NowPlaying)
+export default connect(mapStateToProps, { fetchVideos })(About)
+

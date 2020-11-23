@@ -3,17 +3,20 @@ body{
 }
 
 .card-deck{
-    padding: 3rem;
+    /* /* padding: 10rem; */
+    padding: 5px 5px;
+ 
 }
 
 
 .card:hover{
     box-shadow: 5px 10px 20px 1px rgba(243, 240, 240, 0.253)!important;
-
 }
 
 .card-body{
-    padding: 2.5rem 0 !important;
+    padding: 10rem 0 !important; 
+    /* width: 18rem; */
+
 }
 
 .card-text{
@@ -23,16 +26,15 @@ body{
 
 .overflow{
     overflow: hidden;
-    /* box-shadow: 5px 10px 20px 1px rgba(0,0,0,0.253)!important; */
+    box-shadow: 5px 10px 20px 1px rgba(0,0,0,0.253)!important;
 
 }
 
 .card-img{
-    height: 350px;
-    width: 65px;
+    height: 550px;
+    width: 450px;
     transform: scale(1);
     transition: transform 0.5s ease;
-   
 }
 
 .card-img:hover{

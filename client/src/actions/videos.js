@@ -1,4 +1,4 @@
-export const getVideos = () => {
+export const fetchVideos = () => {
    
     return dispatch => {
         dispatch({type: "LOADING_VIDEOS"})

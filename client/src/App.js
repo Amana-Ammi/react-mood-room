@@ -6,10 +6,8 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
-
-import RoomCard from './components/Card'
-
 import NowPlaying from './components/NowPlaying';
+
 
 
 function App() {
@@ -23,7 +21,8 @@ function App() {
           <Route path="/about" component={About} />
           
           <Route path="/blue" component={NowPlaying} />
-          <Route path="/card" component={RoomCard} />
+
+          <Route path="/:video_id" component={NowPlaying} />
         </Switch>
       </div>
     </Router>

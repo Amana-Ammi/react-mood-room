@@ -1,70 +1,62 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+                                     THE MOOD ROOM
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `yarn start`
+WHAT AM I?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    The Mood Room was designed to avoid the overwhelming rabbit holes that one may find themselves in while looking for a playlist to listen to. Spotify has so many curated playlists that by the time you find the right one, you might have forgotten what you were truly in the mood for. Then Youtube just throws everything at you, with a little bit of car-detailing videos on the side... or is that just me?
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    The Mood Room aims to simplify the search for Vibes. With a limited amount of playlists that are quick and to the point, you can start enjoying that mood you're in to the fullest immediately.
+   
 
-### `yarn test`
+    
+GETTING STARTED
+    
+    Clone this repository at https://github.com/Amonsta/react-mood-room
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    
+    There are two directories for this repository. First, make sure you cd into the 'backend' from your terminal;
 
-### `yarn build`
+    > cd backend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    then..
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    To ensure you have all gems needed to use this program;  run 'bundle install' from your terminal.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    Run 'rails s -p 3001'
 
-### `yarn eject`
+    Now that you have the Rails server up and running, let's get the React-Redux frontend going. Open a second terminal, leaving your Rails server running. In the new terminal type;
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    > cd client
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    then..
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    To ensure you have all dependencies needed to use this program;  run 'npm install' from your terminal.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    Run 'npm start'
 
-## Learn More
+    For the best user experience, please maximize your browser window.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    To exit the application completely, close the open browser window and don't forget to input "ctrl + c" into your rails and React terminals.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+HOW-TO
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    After running the program, you'll be greeted by the Landing page. You'll have two options at the top, "Home", (Which is the landing page) and "Get Started".
 
-### Analyzing the Bundle Size
+     Once you're on the Start page you'll be able to browse the available playlists and upon clicking, "Listen Now", you'll be taken to that individual page to play the video.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+     Enjoy!
 
-### Making a Progressive Web App
+SUPPORT
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    If you have any questions, concerns or would like to share your experience with any results from the app, please reach out via Github.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+LICENSE
 
-### Deployment
+    MIT License --> https://opensource.org/licenses/MIT
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -4,8 +4,9 @@ class CreateVideos < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :vid_url
       t.string :mood
-      t.integer :likes
-      t.integer :dislikes
+      t.string :image_url
+      t.string :description
+
 
       t.timestamps
     end

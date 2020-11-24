@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2020_11_15_024316) do
     t.string "title"
     t.string "vid_url"
     t.string "mood"
-    t.integer "likes"
-    t.integer "dislikes"
+    t.string "image_url"
+    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

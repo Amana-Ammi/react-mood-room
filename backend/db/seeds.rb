@@ -9,17 +9,17 @@
 
 
 Video.create([
-    { title: "Rainy Day Soul", vid_url: "https://www.youtube.com/watch?v=f02mOEt11OQ", mood: "chill", likes: 25 , dislikes: 1 }
+    { title: "A Little Seoul", vid_url: "https://youtu.be/39S4BAvjFeo", mood: "chill", image_url: "https://react-my-dj.s3-us-west-2.amazonaws.com/Dance.jpg", description: "A few introductory Korean R&B tracks that are sure to get you grooving." }
 ])
 
 Video.create([
-    { title: "Lo-fi", vid_url: "https://www.youtube.com/watch?v=GZgoXPybYOY", mood: "chill", likes: 25 , dislikes: 5 }
+    { title: "Wu-Tang Generator Name", vid_url: "https://www.youtube.com/watch?v=ExVtrghW5Y4&list=PLzDWYEiYiW2Avuzbt0Pz2dPPXRr3AHYsH", mood: "hype", image_url: "https://free2music.com/images/singer/2018/11/01/childish-gambino_0.jpg", description: "Childish Gambino. Need I say More?" }
 ])
 
 Video.create([
-    { title: "Afro Beats", vid_url: "https://www.youtube.com/watch?v=FrCUPRHNhOw", mood: "fun", likes: 15, dislikes: 0 }
+    { title: "Afro Beats", vid_url: "https://youtu.be/SQ2cHyowuwI", mood: "happy", image_url: "https://react-my-dj.s3-us-west-2.amazonaws.com/afro-beat.jpg", description: "A true happy place."}
 ])
 
 Video.create([
-    { title: "Dance", vid_url: "https://www.youtube.com/watch?v=Elt0ZQo5bHY", mood: "happy", likes: 20, dislikes: 10 }
+    { title: "Rainy Day", vid_url: "https://youtu.be/PReV3zH4iIw", mood: "relaxed", image_url: "https://react-my-dj.s3-us-west-2.amazonaws.com/rain_1.jpg", description: "Sometimes you need to relax as if it was raining outside. Grab a blanket and some hot chocolate for this one." }
 ])

@@ -9,19 +9,7 @@ function Navbar() {
             </Link>
 
             < Link to="/about">
-                <li>ABOUT</li>
-            </Link>
-
-            <Link to="/blue">
-                <li>BLUE ROOM</li>
-            </Link>
-
-            <Link to="/red">
-                <li>RED ROOM</li>
-            </Link>
-
-            <Link to="/red">
-                <li>DANCE ROOM</li>
+                <li>GET STARTED</li>
             </Link>
         </ul>
         );

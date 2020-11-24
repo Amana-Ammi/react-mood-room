@@ -5,8 +5,9 @@ import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import About from './components/About';
+import Start from './components/Start';
 import NowPlaying from './components/NowPlaying';
+import Footer from './components/Footer';
 
 
 
@@ -18,9 +19,10 @@ function App() {
       <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
+          <Route path="/start" component={Start} />
           <Route path="/:video_id" exact component={NowPlaying} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

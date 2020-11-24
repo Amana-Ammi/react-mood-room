@@ -1,6 +1,7 @@
-/* .App {
+.App {
   text-align: center;
-} */
+  color: white;
+}
 
 /* .navbar-body {
   background: rgba(255,255,255,0.9);
@@ -22,11 +23,11 @@
   margin-left: 25%;
 }
 
-.container {
+/* .container {
   display: grid | inline-grid;
   float: left;
   width: 45%;
-}
+} */
 
 
 /* .App-logo {

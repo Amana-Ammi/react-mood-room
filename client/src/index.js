@@ -5,7 +5,8 @@ import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
-import videoReducer from './reducers/videoReducer'
+import videoReducer from './reducers/videoReducer';
+
 
  
 

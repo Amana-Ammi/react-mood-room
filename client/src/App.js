@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import React from 'react';
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -19,10 +19,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
-          
-          <Route path="/blue" component={NowPlaying} />
-
-          <Route path="/:video_id" component={NowPlaying} />
+          <Route path="/:video_id" exact component={NowPlaying} />
         </Switch>
       </div>
     </Router>

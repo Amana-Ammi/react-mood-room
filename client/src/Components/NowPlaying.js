@@ -3,15 +3,7 @@ import { connect } from 'react-redux';
 import { fetchVideos } from '../actions/videos';
 import ReactPlayer from 'react-player'
 
-// import { fetchVideos } from '../actions/videos';
-
-import './Card.css';
-
-
-import { useSelector } from 'react-redux'
-
-// Want photos with links to the room and appropriate ID. 
-// Possibly remove like and dislike feature from backend
+import './NowPlaying.css';
 
 class NowPlaying extends Component {
     componentDidMount() {
@@ -19,22 +11,16 @@ class NowPlaying extends Component {
         // let id = this.props.match.params.video_id
     }
 
-//create Rooms for each Mood.
-// this correctly renders a single room based off of the mood
-// style each room accordingly.
-
      render() {
-        // let id = this.props.match.params.video_id
+        let id = this.props.match.params.video_id
         const videos = this.props.videos.map(video => {
             // if (video.mood === "hype") { 
-                console.log(this.props.match.params.video_id)
-                if (video.id == this.props.match.params.video_id) { 
-            //     // let id = this.props.match.params.video_id
-            //     // if (video.id === this.props.match.params.video_id) { 
+
+                if (video.id == id) { 
                 return ( 
                     <div key={video.id} >
-                        <h3>{video.title}</h3>
-                        <ReactPlayer url={video.vid_url} />
+                        <h3 className="np-title">{video.title}</h3>
+                        <ReactPlayer controls className="video" url={video.vid_url} />
                     </div> 
                 ) 
             } 
@@ -43,7 +29,7 @@ class NowPlaying extends Component {
        
 
         return (
-            <div className="container" style={{ padding: '10rem' }} >
+            <div style={{ padding: '20rem' }} >
                 <h2>Now Playing...</h2>
                     {this.props.loading ? <h3>Loading.....</h3> : videos}
             </div>
@@ -60,4 +46,3 @@ const mapStateToProps = state => {
 }
  
 export default connect(mapStateToProps, { fetchVideos })(NowPlaying)
-

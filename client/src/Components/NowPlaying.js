@@ -6,6 +6,7 @@ import ReactPlayer from 'react-player'
 import './NowPlaying.css';
 
 class NowPlaying extends Component {
+
     componentDidMount() {
         this.props.fetchVideos()
         // let id = this.props.match.params.video_id
@@ -14,9 +15,7 @@ class NowPlaying extends Component {
      render() {
         let id = this.props.match.params.video_id
         const videos = this.props.videos.map(video => {
-            // if (video.mood === "hype") { 
-
-                if (video.id == id) { 
+                if (video.id === parseInt(id)) { 
                 return ( 
                     <div key={video.id} >
                         <h3 className="np-title">{video.title}</h3>
@@ -37,6 +36,8 @@ class NowPlaying extends Component {
     }
 
 }
+
+//tells me which parts of the state I want to provide to the component
 
 const mapStateToProps = state => {
     return {

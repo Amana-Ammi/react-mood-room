@@ -1,6 +1,6 @@
 class Api::V1::VideosController < ApplicationController
 
-    before_action :find_video, only: [:update, :show, :destroy]
+    before_action :find_video, only: [:show, :update, :destroy]
 
     def index
         @videos = Video.all
@@ -8,12 +8,12 @@ class Api::V1::VideosController < ApplicationController
         # render json: VideoSerializer.new(videos).serialized_json
     end
 
-    def create
-        video = Video.new(video_params)
-        if product.save
-            render json: VideoSerializer.new(video).serialized_json
-        end
-    end
+    # def create
+    #     video = Video.new(video_params)
+    #     if product.save
+    #         render json: VideoSerializer.new(video).serialized_json
+    #     end
+    # end
 
     def show
         render json: @video

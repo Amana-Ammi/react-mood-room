@@ -1,11 +1,11 @@
 .footer {
     font-size: 10px;
     /* color: white; */
-    margin-top: 1rem;
+  margin-top: 1rem;
   padding: 1rem;
   background: transparent;
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 10%;
 }

@@ -10,6 +10,7 @@ import videoReducer from './reducers/videoReducer';
 
 const rootReducer = combineReducers({
   videoReducer
+  // reducerForVideos: videoReducer
 })
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));

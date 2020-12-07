@@ -8,6 +8,8 @@ import Home from './components/Home';
 import Start from './components/Start';
 import NowPlaying from './components/NowPlaying';
 import Footer from './components/Footer';
+import About from './components/About';
+import Contact from './components/Contact';
 
 
 
@@ -19,6 +21,8 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/start" component={Start} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
           <Route path="/:video_id" exact component={NowPlaying} />
         </Switch>
         <Footer />

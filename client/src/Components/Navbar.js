@@ -16,10 +16,6 @@ function Navbar() {
             < Link to="/about">
                 <li>ABOUT THE CURATOR</li>
             </Link>
-
-            < Link to="/contact">
-                <li>CONTACT</li>
-            </Link>
         </ul>
     );
 }

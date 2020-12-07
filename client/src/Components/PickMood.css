@@ -1,0 +1,77 @@
+.start body{
+    /* background: url(../images/lights.jpg) no-repeat center center fixed; */
+    /* min-height: 100vh; */
+    min-height: 100%;
+    min-width: 1024px;
+    position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    flex-direction: row;
+    flex-flow: row wrap;
+}
+
+/* @media screen and ( max-width: 600px ) {
+    .overflow { flex-basis: 50%; }                    /* forces two items to a line */
+/* }  */
+
+.card-deck{
+    padding: 5px 5px;
+    margin-left: 1%;
+    border: rgb(209, 209, 209);
+} 
+
+.card:hover{
+    box-shadow: 5px 10px 20px 1px rgba(243, 240, 240, 0.253)!important;
+}
+
+.card-body{
+    padding: 10rem 0; 
+    /* width: 18rem; */
+}
+
+.card-text{
+    font-size: .9rem;
+    padding: 0.4rem 1.9rem;
+    color: black;
+}
+
+.overflow{
+    overflow: hidden;
+    box-shadow: 5px 10px 20px 1px rgba(0,0,0,0.253);
+}
+
+.card-img{
+    height: 550px;
+    width: 450px;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.card-img:hover{
+    transform: scale(1.2);
+}
+
+.btn {
+    transition-duration: 0.4s;
+    background-color: rgb(109, 170, 248) ;
+    text-align: center;
+  }
+  
+.btn:hover {
+    background-color: #fda6ef; /* Green */
+    color: white;
+}
+
+.start-h1 {
+    font: white;
+}
+
+.about {
+  color: white;
+}

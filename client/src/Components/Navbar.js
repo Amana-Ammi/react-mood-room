@@ -12,8 +12,16 @@ function Navbar() {
             < Link to="/start">
                 <li>GET STARTED</li>
             </Link>
+
+            < Link to="/about">
+                <li>ABOUT THE CURATOR</li>
+            </Link>
+
+            < Link to="/contact">
+                <li>CONTACT</li>
+            </Link>
         </ul>
-        );
+    );
 }
  
 

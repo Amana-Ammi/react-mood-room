@@ -9,7 +9,7 @@ export default (state = { videos: [], loading: false}, action) => {
         // Once we change state, the component will rerender 
         case "VIDEOS_LOADED":
             return {
-                ...state,
+                // ...state, do not ne
                 videos: action.payload,
                 loading:false
             }

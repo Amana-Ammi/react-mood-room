@@ -9,7 +9,6 @@ class NowPlaying extends Component {
 
     componentDidMount() {
         this.props.fetchVideos()
-        // let id = this.props.match.params.video_id
     }
 
      render() {
@@ -25,8 +24,6 @@ class NowPlaying extends Component {
             } 
         })
        
-       
-
         return (
             <div style={{ padding: '20rem' }} >
                 <h2>Now Playing...</h2>

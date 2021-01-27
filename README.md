@@ -3,7 +3,7 @@
 
 
 
-WHAT AM I?
+> WHAT AM I?
 
     The Mood Room was designed to avoid the overwhelming rabbit holes that one may find themselves in while looking for a playlist to listen to. Spotify has so many curated playlists that by the time you find the right one, you might have forgotten what you were truly in the mood for. Then Youtube just throws everything at you, with a little bit of car-detailing videos on the side... or is that just me?
 
@@ -11,7 +11,7 @@ WHAT AM I?
    
 
     
-GETTING STARTED
+> GETTING STARTED
     
     Clone this repository at https://github.com/Amonsta/react-mood-room
 
@@ -41,7 +41,7 @@ GETTING STARTED
     To exit the application completely, close the open browser window and don't forget to input "ctrl + c" into your rails and React terminals.
 
 
-HOW-TO
+> HOW-TO
 
     After running the program, you'll be greeted by the Landing page. You'll have two options at the top, "Home", (Which is the landing page) and "Get Started".
 
@@ -49,12 +49,12 @@ HOW-TO
 
      Enjoy!
 
-SUPPORT
+> SUPPORT
 
     If you have any questions, concerns or would like to share your experience with any results from the app, please reach out via Github.
 
 
-LICENSE
+> LICENSE
 
     MIT License --> https://opensource.org/licenses/MIT
 

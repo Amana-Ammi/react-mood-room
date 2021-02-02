@@ -7,7 +7,6 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import videoReducer from './reducers/videoReducer';
 
-
 const rootReducer = combineReducers({
   videoReducer
 })

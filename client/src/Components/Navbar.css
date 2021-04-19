@@ -7,7 +7,6 @@
     /* background: rgba(255,255,255,0.9); */
 }
 
-
 li {
     display: inline;
     padding: 14px 16px;
@@ -16,8 +15,6 @@ li {
     font-size: 15px;
   }
 
-  
-  
   /* Change the link color to #111 (black) on hover */
   li:hover {
     background-color: rgb(233, 231, 231);
